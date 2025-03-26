@@ -14,3 +14,15 @@ function multiplyByTwo(obj){
     }
 }
 console.log(nums);
+
+
+//If we assign an Object as a key the key becomes [object object]
+let a = {}
+let b = {key:"b"} //Key=key, value="b"
+let c = {key:"c"} //Key=key, value="c"
+
+a[b] = 234;
+a[c] = 786;
+console.log(a[b]);
+//Prints 786 because a[b] where b = {key:"b"} is an Object
+//so a[b] = a[object object] and a[c] = a[object object] so last value of this key is updated
